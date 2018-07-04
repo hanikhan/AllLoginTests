@@ -8,4 +8,4 @@
 * `username field` and `password field` have placeholders/hint text.
 
 ## Note
-* The project has a feature file title `loginTests.feature`, please feel free to add more scenarios to the same feature file and submit a PR
+* The project has a feature file titled `loginTests.feature`, please feel free to add more scenarios to the same feature file and submit a PR
