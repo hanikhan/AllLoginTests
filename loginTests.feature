@@ -55,3 +55,14 @@ Feature: Validate Login scenarios
     |                    |                    |
     |invalid@email.com   |                    |
     |                    |invalidPassword     |
+
+  Scenario: Validate paste option does not work for password field
+    Given I am on the login page
+    And I paste clipboard text to password field
+    Then clipboard text should not be pasted in the password field
+
+  Scenario: Validate copy option does not work for password field
+    Given I am on the login page
+    And I enter some text in the password field
+    And I try copying text in the password field
+    Then text in password field should not be copied to the clipboard

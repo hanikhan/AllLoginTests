@@ -1,0 +1,7 @@
+Validate that the password is in encrypted form when it is entered in the password field
+
+Tests related to CAPTCHA:
+- Validate if refresh link for CAPTCHA generates a new CAPTCHA
+- Test client side validation if user does not enter anything in the CAPTCHA field and tries to login
+- Validate if CAPTCHA is case-sensitive (This may not be true for all CAPTCHA service providers)
+- Validate audio CAPTCHA if it is supported
