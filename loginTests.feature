@@ -66,3 +66,18 @@ Feature: Validate Login scenarios
     And I enter some text in the password field
     And I try copying text in the password field
     Then text in password field should not be copied to the clipboard
+
+  Scenario: Validate if CAPTCHA is displayed after 5 unsuccessful login attempts
+    Given I am on the login page
+    And I enter an invalid username and password 5 times
+    Then A CAPTCHA should be displayed on the login form
+
+  Scenario: Validate user is directed to forgot password page when he/she clicks forgot password link
+    Given I am on the login page
+    And I click the forgot password link
+    Then I should be directed to the forgot password page
+    
+  Scenario: Validate if user is direct to account creation page when he/she clicks Create New Account or SignUp button
+    Given I am on the login page
+    And I click on the Create New Account button
+    Then I should be directed to the create new account page
