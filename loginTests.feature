@@ -47,7 +47,7 @@ Feature: Validate Login scenarios
     Then I must see an invalid login error
 
     Examples:
-    |emailAddress        | password           |
+    |emailAddress        |password            |
     |valid@email.com     |invalidPassword     |
     |invalid@email.com   |validPassword       |
     |                    |validPassword       |
@@ -81,3 +81,18 @@ Feature: Validate Login scenarios
     Given I am on the login page
     And I click on the Create New Account button
     Then I should be directed to the create new account page
+
+  Scenario: Validate if google login functions as desired
+     Given I am on the login page
+     And I click on google login link
+     And I enter a valid google email address
+     And I enter a valid google password
+     And I click the login/Next button
+     Then I should be redirected to the homepage
+
+  Scenario: Validate password field is empty after an invalid login attempt
+     Given I am on the login page
+     And I enter a valid email address
+     And I enter an invalid password
+     And I click the login button
+     Then Password field must be empty
